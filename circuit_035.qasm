@@ -1,0 +1,15 @@
+qreg q[6];
+creg c[6];
+ccz q[4],q[5],q[2];
+rxx(1.782209481706354) q[0],q[3];
+sx q[1];
+xx_minus_yy(0.13437840387928998,0.050844420118250015) q[1],q[2];
+cx q[5],q[0];
+ccz q[3],q[5],q[4];
+ecr q[1],q[2];
+measure q[0] -> c[0];
+measure q[1] -> c[1];
+measure q[2] -> c[2];
+measure q[3] -> c[3];
+measure q[4] -> c[4];
+measure q[5] -> c[5];

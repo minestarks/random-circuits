@@ -1,0 +1,12 @@
+qreg q[4];
+c3sqrtx q[1],q[2],q[3],q[0];
+rcccx q[0],q[2],q[3],q[1];
+rcccx q[1],q[0],q[3],q[2];
+rcccx q[1],q[0],q[3],q[2];
+s q[2];
+cswap q[0],q[3],q[1];
+ecr q[2],q[1];
+cu1(5.754752907596705) q[0],q[3];
+cswap q[3],q[1],q[2];
+rcccx q[0],q[1],q[2],q[3];
+rcccx q[1],q[2],q[0],q[3];
